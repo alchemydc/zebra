@@ -686,10 +686,19 @@ fn create_cached_database(network: Network) -> Result<()> {
 }
 
 fn sync_past_sapling(network: Network) -> Result<()> {
-    let height = NetworkUpgrade::Sapling.activation_height(network).unwrap() + 1000;
+    let height = NetworkUpgrade::Sapling.activation_height(network).unwrap() + 1200;
     create_cached_database_height(network, height.unwrap())
 }
 
+// These tests are ignored because they're too long running to run during our
+// traditional CI, and they depend on persistent state that cannot be made
+// available in github actions or google cloud build. Instead we run these tests
+// directly in a vm we spin up on google compute engine, where we can mount
+// drives populated by the first two tests and then use those to more quickly
+// run the second two tests.
+
+// Create a cached copy of the mainnet database up to the sapling activation
+// height.
 #[test]
 #[ignore]
 fn create_mainnet_cache() {
@@ -697,6 +706,8 @@ fn create_mainnet_cache() {
     let network = Mainnet;
     create_cached_database(network).unwrap();
 }
+// Create a cached copy of the testnet database up to the sapling activation
+// height.
 #[test]
 #[ignore]
 fn create_testnet_cache() {
@@ -705,6 +716,7 @@ fn create_testnet_cache() {
     create_cached_database(network).unwrap();
 }
 
+/// Test syncing 1200 blocks (3 checkpoints) past the last checkpoint on mainnet.
 #[test]
 #[ignore]
 fn sync_past_sapling_mainnet() {
@@ -713,6 +725,7 @@ fn sync_past_sapling_mainnet() {
     sync_past_sapling(network).unwrap();
 }
 
+/// Test syncing 1200 blocks (3 checkpoints) past the last checkpoint on testnet.
 #[test]
 #[ignore]
 fn sync_past_sapling_testnet() {
