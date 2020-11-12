@@ -697,24 +697,24 @@ fn sync_past_sapling(network: Network) -> Result<()> {
 // drives populated by the first two tests, snapshot those drives, and then use
 // those to more quickly run the second two tests.
 
-// Create a cached copy of the mainnet database up to the sapling activation
-// height.
-#[test]
-#[ignore]
-fn create_mainnet_cache() {
-    zebra_test::init();
-    let network = Mainnet;
-    create_cached_database(network).unwrap();
-}
-// Create a cached copy of the testnet database up to the sapling activation
-// height.
-#[test]
-#[ignore]
-fn create_testnet_cache() {
-    zebra_test::init();
-    let network = Testnet;
-    create_cached_database(network).unwrap();
-}
+// // Create a cached copy of the mainnet database up to the sapling activation
+// // height.
+// #[test]
+// #[ignore]
+// fn create_mainnet_cache() {
+//     zebra_test::init();
+//     let network = Mainnet;
+//     create_cached_database(network).unwrap();
+// }
+// // Create a cached copy of the testnet database up to the sapling activation
+// // height.
+// #[test]
+// #[ignore]
+// fn create_testnet_cache() {
+//     zebra_test::init();
+//     let network = Testnet;
+//     create_cached_database(network).unwrap();
+// }
 
 /// Test syncing 1200 blocks (3 checkpoints) past the last checkpoint on mainnet.
 #[test]
