@@ -70,6 +70,9 @@ As a **Performance Engineer**, I want **a dedicated environment for running and 
 
 ### Story 1.2 `zcashd` Performance Analysis
 As a **Zebra Developer**, I want **a technical summary of `zcashd`'s sandblasting-related performance improvements**, so that **I can inform Zebra's instrumentation and remediation plan.**
+Some work has already been done to compile and analyze the mitigations. See 
+[ECC Sandblasting Mitigation Analysis](ecc_sandblasting_mitigations_analysis.md)
+
 #### Acceptance Criteria
 1. The summary identifies the specific code changes, architectural patterns, or configuration tuning that the ECC team implemented in `zcashd` to mitigate performance issues.
 2. The summary explains the intended or observed effect of each identified change on `zcashd`'s performance.
@@ -170,16 +173,3 @@ As a **Zebra Developer**, I want to **implement the code changes to fix an ident
 
 ---
 
-## Checklist Results Report
-
-| Category | Status | Critical Issues |
-| :--- | :--- | :--- |
-| 1. Problem Definition & Context | PASS | None |
-| 2. MVP Scope Definition | PASS | None |
-| 3. User Experience Requirements | N/A | This project has no end-user UI. |
-| 4. Functional Requirements | PASS | None |
-| 5. Non-Functional Requirements | PASS | None |
-| 6. Epic & Story Structure | PASS | None |
-| 7. Technical Guidance | PASS | None |
-| 8. Cross-Functional Requirements | PASS | None |
-| 9. Clarity & Communication | PASS | None |
