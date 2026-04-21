@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org).
 
 - Sentry events now carry `SENTRY_ENVIRONMENT`, `git.ref`, `git.sha`, and CI context (`CI_PR_NUMBER`, `CI_TEST_ID`, `GITHUB_*`) when present ([#10490](https://github.com/ZcashFoundation/zebra/pull/10490))
 - `opentelemetry` is now part of the `default-release-binaries` feature set; export stays disabled until `OTEL_EXPORTER_OTLP_ENDPOINT` (or the tracing config) is set ([#10490](https://github.com/ZcashFoundation/zebra/pull/10490))
+- Public benchmark dashboard at [zebra.zfnd.org/dev/bench](https://zebra.zfnd.org/dev/bench) covering Groth16, Halo2, Sapling, RedPallas, block, and transaction benchmarks ([#10444](https://github.com/ZcashFoundation/zebra/pull/10444))
 
 ### Changed
 
