@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org).
 
 ## [Unreleased]
 
+### Security
+
+- Fix sigops counting ([GHSA-jv4h-j224-23cc](https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-jv4h-j224-23cc)).
+
 ### Added
 
 - Sentry events now carry `SENTRY_ENVIRONMENT`, `git.ref`, `git.sha`, and CI context (`CI_PR_NUMBER`, `CI_TEST_ID`, `GITHUB_*`) when present ([#10490](https://github.com/ZcashFoundation/zebra/pull/10490))
