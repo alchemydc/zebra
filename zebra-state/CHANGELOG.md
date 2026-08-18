@@ -5,12 +5,11 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org).
 
-### Added
+## [13.0.1] - 2026-08-18
 
-- Added the concrete error type `AwaitUtxoError` for handling failed `AwaitUtxo` state requests
-  [#11205](https://github.com/ZcashFoundation/zebra/pull/11205).
-- Added `MappedRequest` for `AwaitUtxoRequest`
-  [#11205](https://github.com/ZcashFoundation/zebra/pull/11205).
+### Changed
+
+- Updated the following local packages: zebra-node-services, zebra-chain, zebra-test
 
 ## [13.0.0] - 2026-08-10
 
