@@ -5,6 +5,17 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [12.1.0] - 2026-08-18
+
+### Added
+
+- A `fuzzing` feature, off by default, which makes the `protocol` module public for the coverage-guided fuzz harnesses in `zebra-fuzz/`. It activates no dependencies and leaves default and release builds unchanged ([#11221](https://github.com/ZcashFoundation/zebra/pull/11221)).
+
+### Changed
+
+- Concurrent reconnection-candidate selection can no longer hand the same peer to two connection attempts: a candidate is now chosen and marked `AttemptPending` in a single atomic step. `init()`, the public API, and network-visible behavior are unchanged ([#1976](https://github.com/ZcashFoundation/zebra/issues/1976)).
+- Outbound connection pacing is now applied only when an address-book candidate is returned. An empty candidate-selection attempt no longer delays the next available connection attempt. Crawls are still skipped while rate-limited, and the intervals are unchanged ([#1976](https://github.com/ZcashFoundation/zebra/issues/1976)).
+
 ## [12.0.0] - 2026-08-10
 
 ### Breaking Changes

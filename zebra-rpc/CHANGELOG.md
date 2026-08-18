@@ -5,6 +5,12 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [16.0.1] - 2026-08-18
+
+### Breaking Changes
+
+- `config::Config::max_response_body_size` now has type `u32` instead of `usize`. Convert existing `usize` values before assigning them ([#11259](https://github.com/ZcashFoundation/zebra/pull/11259)).
+
 ## [16.0.0] - 2026-08-10
 
 ### Breaking Changes

@@ -5,6 +5,12 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [Zebra 6.3.1](https://github.com/ZcashFoundation/zebra/releases/tag/v6.3.1) - 2026-08-18
+
+### Breaking Changes
+
+- `rpc.max_response_body_size` is now limited to 4,294,967,295 bytes. Configurations with larger values must reduce the limit; they are rejected during configuration loading instead of causing an RPC server startup panic ([#11259](https://github.com/ZcashFoundation/zebra/pull/11259)).
+
 ## [Zebra 6.3.0](https://github.com/ZcashFoundation/zebra/releases/tag/v6.3.0) - 2026-08-10
 
 ### Added
